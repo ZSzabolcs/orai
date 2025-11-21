@@ -15,7 +15,9 @@ namespace cucc2.Models
         public string? Description { get; set; }
         [Required]
         public bool Comments { get; set; }
+        public int BloggerId { get; set; }
         public DateTime RegTime { get; set; } = DateTime.Now;
         public DateTime ModTime { get; set; } = DateTime.Now;
+        public virtual Blogger Bloggers { get; set; }
     }
 }

@@ -18,5 +18,6 @@ namespace cucc2.Models
         public string? Email { get; set; }
         public DateTime Regtime { get; set; } = DateTime.Now;
         public DateTime Modtime { get; set; } = DateTime.Now;
+        public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
     }
 }

@@ -1,0 +1,6 @@
+@cucc2_HostAddress = http://localhost:5017
+
+GET {{cucc2_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

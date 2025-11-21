@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cucc2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4fe89107a86415f42bdb0f6630132b8cb945fc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6adf8f881ea4ef0e292eae58507aaaae7167eb98")]
 [assembly: System.Reflection.AssemblyProductAttribute("cucc2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cucc2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

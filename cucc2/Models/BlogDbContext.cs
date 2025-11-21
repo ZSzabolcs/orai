@@ -14,6 +14,8 @@ namespace cucc2.Models
 
         }
 
+        public DbSet<Blogger> bloggers { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL("server=localhost; database=blog; user=root; password=");

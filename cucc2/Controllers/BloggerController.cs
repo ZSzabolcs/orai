@@ -12,21 +12,28 @@ namespace cucc2.Controllers
         [HttpPost]
         public ActionResult AddNewBlogger(AddBloggerDto addBloggerDto)
         {
-            using (var context = new BlogDbContext())
+            try
             {
-                var blogger = new Blogger
+                using (var context = new BlogDbContext())
                 {
-                    Name = addBloggerDto.Name,
-                    Password = addBloggerDto.Password,
-                    Email = addBloggerDto.Email
-                };
-                if (blogger != null)
-                {
-                    context.bloggers.Add(blogger);
-                    context.SaveChanges();
-                    return StatusCode(201, new { message = "Sikeres felvétel", result = blogger });
+                    var blogger = new Blogger
+                    {
+                        Name = addBloggerDto.Name,
+                        Password = addBloggerDto.Password,
+                        Email = addBloggerDto.Email
+                    };
+                    if (blogger != null)
+                    {
+                        context.bloggers.Add(blogger);
+                        context.SaveChanges();
+                        return StatusCode(201, new { message = "Sikeres felvétel", result = blogger });
+                    }
+                    return NotFound(new { message = "Sikertelen felvétel", result = blogger });
                 }
-                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message, result = "" });
             }
         }
     }

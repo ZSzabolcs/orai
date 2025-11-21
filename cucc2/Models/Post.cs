@@ -20,6 +20,5 @@ namespace cucc2.Models
         public DateTime RegTime { get; set; } = DateTime.Now;
         public DateTime ModTime { get; set; } = DateTime.Now;
         public virtual Blogger Bloggers { get; set; }
-        public DbSet<Post> Posts { get; set; }
     }
 }

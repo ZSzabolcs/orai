@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace cucc2.Models
@@ -19,5 +20,6 @@ namespace cucc2.Models
         public DateTime RegTime { get; set; } = DateTime.Now;
         public DateTime ModTime { get; set; } = DateTime.Now;
         public virtual Blogger Bloggers { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }
